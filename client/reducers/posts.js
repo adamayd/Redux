@@ -7,8 +7,8 @@
 function posts(state = [], action) {
   switch(action.type) {
     case 'INCREMENT_LIKES' :
-      console.log('incrementing likes');
-      console.log(state, action)
+      // console.log('incrementing likes');
+      // console.log(state, action)
       const index = action.index;
       return [
         ...state.slice(0,index), //before the one we are updating

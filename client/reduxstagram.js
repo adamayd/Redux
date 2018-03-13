@@ -31,7 +31,7 @@ Raven.config(sentry_url, {
 // });
 
 // Raven.captureMessage('Something bad happened');
-Raven.showReportDialog();
+// Raven.showReportDialog();
 
 const router = (
   <Provider store={store}>

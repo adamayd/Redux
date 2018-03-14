@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 class Photo extends React.Component {
   render() {
@@ -11,12 +11,15 @@ class Photo extends React.Component {
           <Link to={`/view/${post.code}`}>
             <img src={post.display_src} alt={post.caption} className="grid-photo" />
           </Link>
-          <CSSTransitionGroup 
-            transitionName="like"
-            transitionEnterTimeout={500}
-            transitionExitTimeout={500}>
-            <span key={post.likes} className="likes-heart">{post.likes}</span>
-          </CSSTransitionGroup>
+          <TransitionGroup component="span" className="likes-heart">
+            <CSSTransition 
+              classNames="likes-heart" 
+              key={post.likes} 
+              timeout={{ enter: 500, exit: 500 }}
+            >
+              <span>{post.likes}</span>
+            </CSSTransition>
+          </TransitionGroup>
         </div>
         <figcaption>
           <p>{post.caption}</p>

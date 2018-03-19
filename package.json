@@ -21,5 +21,9 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
+    "expect": "^23.0.0-alpha.0",
+    "redux": "^3.7.2"
   }
 }

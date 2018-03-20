@@ -11,13 +11,13 @@ class Photo extends React.Component {
           <Link to={`/view/${post.code}`}>
             <img src={post.display_src} alt={post.caption} className="grid-photo" />
           </Link>
-          <TransitionGroup component="span" className="likes-heart">
+          <TransitionGroup>
             <CSSTransition 
-              classNames="likes-heart" 
+              classNames="like"
               key={post.likes} 
               timeout={{ enter: 500, exit: 500 }}
             >
-              <span>{post.likes}</span>
+              <span className="likes-heart">{post.likes}</span>
             </CSSTransition>
           </TransitionGroup>
         </div>

@@ -7,7 +7,8 @@ import storeFactory from './store'
 //   clearError,
 //   changeSuggestions,
 //   clearSuggestions } from './actions'
-import { randomGoals } from './actions'
+// import { randomGoals } from './actions'
+import { suggestResortNames } from './actions'
 
 const store = storeFactory()
 
@@ -39,8 +40,12 @@ const store = storeFactory()
 //   clearSuggestions()
 // )
 
+// store.dispatch(
+//   randomGoals()
+// )
+
 store.dispatch(
-  randomGoals()
+  suggestResortNames("hea")
 )
 
 // const initialState = (localStorage['redux-store']) ?

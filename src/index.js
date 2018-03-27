@@ -1,41 +1,46 @@
 import storeFactory from './store'
-import { 
-  addDay, 
-  removeDay, 
-  setGoal,
-  addError,
-  clearError,
-  changeSuggestions,
-  clearSuggestions } from './actions'
+// import { 
+//   addDay, 
+//   removeDay, 
+//   setGoal,
+//   addError,
+//   clearError,
+//   changeSuggestions,
+//   clearSuggestions } from './actions'
+import { randomGoals } from './actions'
 
 const store = storeFactory()
 
-store.dispatch(
-  addDay("Heavenly", "2016-12-22")
-)
+// store.dispatch(
+//   addDay("Heavenly", "2016-12-22")
+// )
+
+// store.dispatch(
+//   removeDay("2016-12-22")
+// )
+
+// store.dispatch(
+//   setGoal(55)
+// )
+
+// store.dispatch(
+//   addError("something went wrong")
+// )
+
+// store.dispatch(
+//   clearError(0)
+// )
+
+// store.dispatch(
+//   changeSuggestions(['One', 'Two', 'Three'])
+// )
+
+// store.dispatch(
+//   clearSuggestions()
+// )
 
 store.dispatch(
-  removeDay("2016-12-22")
-)
-
-store.dispatch(
-  setGoal(55)
-)
-
-store.dispatch(
-  addError("something went wrong")
-)
-
-store.dispatch(
-  clearError(0)
-)
-
-store.dispatch(
-  changeSuggestions(['One', 'Two', 'Three'])
-)
-
-store.dispatch(
-  clearSuggestions()
+  randomGoals()
 )
 
 // const initialState = (localStorage['redux-store']) ?
